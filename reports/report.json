@@ -1,0 +1,18 @@
+{
+  "meta": {
+    "tool": "auditcloud",
+    "version": "1.0"
+  },
+  "aws": {
+    "summary": {
+      "status": "not run"
+    },
+    "findings": []
+  },
+  "azure": {
+    "summary": {
+      "status": "not run"
+    },
+    "findings": []
+  }
+}
