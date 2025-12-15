@@ -44,3 +44,30 @@ utility and does not modify any cloud resources.
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+
+
+## Quick Start
+
+## AWS Audit
+Configure AWS credentials (read-only permissions recommended):
+```bash
+aws configure
+
+### Run AWS Audit
+python -m auditcloud.cli --aws
+
+## Azure Audit
+az login
+az account show --query id -o tsv
+
+### Run Azure Audit
+python -m auditcloud.cli --azure --azure-subscription-id "<SUBSCRIPTION_ID>"
+
+## Run Both AWS and Azure
+python -m auditcloud.cli --aws --azure --azure-subscription-id "<SUBSCRIPTION_ID>"
+
+
+## Security Notes
+- This tool uses **read-only cloud permissions**
+- No cloud resources are modified
+- Designed for auditing, learning, and security assessment purposes only
