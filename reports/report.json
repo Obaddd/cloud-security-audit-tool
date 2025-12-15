@@ -32,5 +32,15 @@
         }
       ]
     }
+  },
+  "azure": {
+    "summary": {
+      "storage_accounts_scanned": 0,
+      "containers_scanned": 0,
+      "public_storage_accounts": 0,
+      "public_containers": 0,
+      "data_plane_scan_failures": 0
+    },
+    "findings": []
   }
 }
