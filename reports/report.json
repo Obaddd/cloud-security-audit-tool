@@ -5,13 +5,11 @@
   },
   "aws": {
     "summary": {
-      "status": "not run"
-    },
-    "findings": []
-  },
-  "azure": {
-    "summary": {
-      "status": "not run"
+      "buckets_scanned": 1,
+      "public_buckets": 0,
+      "public_access_block_missing_or_weak": 0,
+      "public_acl_grants": 0,
+      "public_policy_buckets": 0
     },
     "findings": []
   }
