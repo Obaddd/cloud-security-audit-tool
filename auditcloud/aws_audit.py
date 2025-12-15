@@ -1,5 +1,6 @@
 import boto3
 from botocore.exceptions import ClientError
+from auditcloud.iam_audit import run_iam_audit
 
 PUBLIC_URIS = {
     "http://acs.amazonaws.com/groups/global/AllUsers",
@@ -89,4 +90,8 @@ def run_aws_audit():
         if bucket_is_public:
             summary["public_buckets"] += 1
 
-    return {"summary": summary, "findings": findings}
+        return {
+        "summary": summary,
+        "findings": findings,
+        "iam": run_iam_audit()
+    }
