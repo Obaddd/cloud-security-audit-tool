@@ -14,10 +14,23 @@
     "findings": [],
     "iam": {
       "summary": {
-        "policies_checked": 0,
-        "high_risk_policies": 0
+        "policies_checked": 1,
+        "high_risk_policies": 1
       },
-      "findings": []
+      "findings": [
+        {
+          "severity": "HIGH",
+          "service": "iam",
+          "resource": "DemoRiskyPassRolePolicy",
+          "issue": "Dangerous IAM actions allowed with Resource='*'.",
+          "details": {
+            "policy_arn": "arn:aws:iam::491085406375:policy/DemoRiskyPassRolePolicy",
+            "actions_sample": [
+              "iam:PassRole"
+            ]
+          }
+        }
+      ]
     }
   }
 }
